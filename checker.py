@@ -4,8 +4,6 @@ import threading
 files = input("Название файла с прокси: ")
 thr = int(input("Кол-во потоков: "))
 
-checker = ProxyChecker()
-
 file = open(files).read().split('\n')
 
 def thread():
