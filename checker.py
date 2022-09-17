@@ -1,4 +1,3 @@
-from proxy_checker import ProxyChecker
 import requests
 import threading
 
