@@ -17,7 +17,7 @@ def thread():
 
 def check(proxys):
     try:
-        req = requests.get("http://google.com", proxies={'http':f'http://{proxys}'})
+        req = requests.get("http://google.com", proxies={'https':f'http://{proxys}'})
         print(f"[LIVE] - {proxys}")
         my_file = open("good.txt", "at")
         my_file.write(f"{proxys}\n")
@@ -26,5 +26,5 @@ def check(proxys):
         print(f"[DEAD] - {proxys}")
 
 for _ in range(thr):
-    t = threading.Thread(target=thread)
+    t = threading.Thread(target=thread) #Аня спасибо за то что делаешь меня счастливым)
     t.start()
